@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+</head>
+<body>
+    <h1>Descubra se é estrangeiro</h1>
+    Digite em que país nasceu: <input type="text" name="txtnasc" id="txtnasc">
+    <input type="button" value="consultar" onclick="consultar()">
+    <div id="res">
+
+    </div>
+
+    <script>
+        function consultar() {
+            var nasc = window.document.querySelector('input#txtnasc')
+            var res = window.document.querySelector('div#res')
+            var a = String(nasc.value)
+            res.innerHTML = `<p>Você mora em <strong>${a}</strong></p>`
+            if (a != 'Brasil'){
+                res.innerHTML += 'Você é estrangeiro'
+            }else {
+                res.innerHTML += 'Você é Brasileiro'
+            }
+        }
+    </script>
+</body>
+</html>

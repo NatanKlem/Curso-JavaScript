@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio 4</title>
+    <style>
+        div{
+            font: normal 20pt Arial;
+            background: grey;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculando o Troco</h1>
+    <div id="area" onclick="clicar()">
+        Comprar produto
+    </div>
+    <script>
+
+       function clicar() {
+        var nome = window.prompt('Que produto você está comprando?')
+       var produto =  window.prompt(`Quanto custa ${nome} que você está comprando?`)
+       var troco = window.prompt(`Qual foi o valor que você deu para pagar ${nome}?`)
+       var valor = Number.parseFloat(produto)
+       var menos = Number.parseFloat(troco)
+       var sobrar = valor - menos 
+       window.alert(`Você comprou ${nome} que custou R$${produto}.\nDeu R$${troco} em dinheiro e vai receber R$${sobrar} de troco.\nVolte sempre!`)
+    }
+    </script>
+</body>
+</html>
